@@ -20,6 +20,6 @@
 
 ## How to start
 
-- git clone
+- git clone [copy link from SSH]
 - npm install
 - npm run start
