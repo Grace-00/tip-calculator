@@ -1,0 +1,52 @@
+.output-wrapper {
+   display: flex; 
+    flex-direction: column;
+   row-gap: 2rem; 
+   flex-basis: 50%;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 15px;
+    padding: 30px;
+
+}
+
+.output-btn {
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 10px 10px;
+    background-color: hsl(172, 67%, 45%);
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: hsl(183, 100%, 15%);
+    outline-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+
+.output-btn:hover{
+   color: hsl(185, 41%, 84%);
+}
+.output-btn:disabled {
+   background-color: hsl(184, 14%, 56%);
+   color: hsl(186, 14%, 43%)
+}
+
+
+.output-tip, .output-total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.output-value p  {
+    color: hsl(172, 67%, 45%);
+    font-size: 32px;
+    font-weight: 700;
+}
+.output-text p  {
+    color: hsl(0, 0%, 100%);
+}
+
+.output-text span{
+    color:hsl(186, 14%, 43%);
+}

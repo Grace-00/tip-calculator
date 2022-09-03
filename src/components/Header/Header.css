@@ -1,0 +1,22 @@
+.header-splitter {
+    text-transform: uppercase;
+    color: hsl(183, 100%, 15%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-title {
+    letter-spacing: 6px;
+    margin: 40px 40px;
+    width: 87px;
+    word-wrap: break-word;
+
+}
+
+@media (min-width: 379px) {
+    .header-title {
+        margin-top: 140px;
+        margin-bottom: 60px;
+    }
+}

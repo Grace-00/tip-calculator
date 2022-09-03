@@ -1,0 +1,86 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.input input {
+    font-size: 24px;
+    color: hsl(183, 100%, 15%);
+    font-family: 'Space Mono', monospace; 
+    text-align: right; 
+    outline: none;
+     border: none;
+    padding: 5px;
+    background-color: hsl(189, 41%, 97%);
+    border-radius: 5px;    
+}
+
+.input input:not(.input.custom-bill input) {
+    margin-top: 10px;
+}
+
+.input input:not(.input.custom-bill input)::placeholder {
+    text-align: right;
+}
+
+.input input:focus {
+    box-shadow: 0 0 0 2px hsl(172, 67%, 45%);
+}
+
+.input label {
+    display: block;
+    color: hsl(186, 14%, 43%);
+}
+
+.input.number-people.img {
+    position: absolute;
+    left: 10px;
+    bottom: 12px;
+}
+
+.bill {
+    position: relative;
+}
+
+.input.bill.img {
+    position: absolute;
+    left: 14px;
+    top: 48px;
+}
+
+.number-people.alert input:focus {
+    box-shadow: 0 0 0 2px red;
+}
+
+.number-people {
+    position: relative;
+}
+
+.span-alert {
+    position: absolute;
+    top: 2px;
+    right: 20px;
+    color: red;
+}
+
+.input.custom-bill input {
+    height: 4vh;
+    width: 100%;
+}
+
+.input.custom-bill input::placeholder {
+    font-family: 'Space Mono', monospace;
+}
+
+@media (min-width: 376px) {
+    .input.bill.img {
+        position: absolute;
+        left: 12px;
+        top: 46px;
+    }
+}

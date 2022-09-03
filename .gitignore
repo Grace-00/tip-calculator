@@ -1,0 +1,8 @@
+node_modules
+dist/
+.parcel-cache
+.env
+.DS_Store
+.vscode/
+src/design/
+src/images/
