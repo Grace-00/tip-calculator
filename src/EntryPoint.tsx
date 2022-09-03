@@ -20,7 +20,7 @@ const EntryPoint = () => {
     const userInput = (e.currentTarget as HTMLInputElement).value;
     const targetId = (e.currentTarget as Element).id;
     const regularTip = e.currentTarget.innerText.slice(0, -1);
-    
+
     switch (targetId) {
       case LabelText.Bill:
         return +userInput < 0 ? 0 : setBill(userInput);
