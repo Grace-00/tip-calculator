@@ -1,0 +1,36 @@
+.tip-selector-wrapper {
+    display: grid;
+    grid-template-columns: 31.5% 31.5% 31.5%;
+    column-gap: 2%;
+    row-gap: 10%;
+    margin-top: 15px;
+}
+
+.tip-selector-container {
+    margin: 30px 0 30px 0;
+}
+
+.tip-selector-container .tip-selector-label {
+    color: hsl(186, 14%, 43%);
+}
+
+.tip-selector-btn {
+    height: 4vh; 
+    
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+
+.tip-selector-btn:disabled {
+    background-color: hsl(184, 14%, 56%);
+    color: hsl(186, 14%, 43%)
+ }
+
+.tip-selector-btn:hover {
+    background-color: hsl(172, 67%, 45%);
+}

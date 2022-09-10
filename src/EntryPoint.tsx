@@ -3,8 +3,7 @@ import Header from "./components/Header/Header";
 import Input from "./components/Input/Input";
 import Label, { LabelText } from "./components/Label/Label";
 import Output from "./components/Output/Output";
-import TipSelector from "./components/TipSelector/TipSelector";
-import { tipBtns } from "./tipBtns";
+import RegularTipSelector from "./components/RegularTipSelector/RegularTipSelector";
 
 type typeEvent =
   | React.ChangeEvent<HTMLInputElement>
@@ -58,16 +57,11 @@ const EntryPoint = () => {
             <div className="tip-selector-container">
               <Label label={LabelText.SelectTip} />
               <div className="tip-selector-wrapper">
-                {tipBtns.map((tipBtn) => {
-                  return (
-                    <TipSelector
-                      key={tipBtn.regularTip}
-                      id={LabelText.Regular}
-                      tipBtn={tipBtn}
-                      handleValueUpdate={onValueUpdate}
-                    />
-                  );
-                })}
+                <RegularTipSelector
+                  tipBtns={[5, 10, 15, 25, 50]}
+                  id={LabelText.Regular}
+                  handleValueUpdate={onValueUpdate}
+                />
                 <Input
                   type="number"
                   placeholder="Custom"

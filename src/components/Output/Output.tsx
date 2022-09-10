@@ -2,7 +2,7 @@ import "./Output.css";
 
 import React from "react";
 import {
-  getCalculatedTip,
+  getTipAmount,
   getTotalPerPerson,
   isEmpty,
   usePrevious,
@@ -21,7 +21,7 @@ const Output = (props: OutputProps) => {
 
   const getOutputTip = () => {
     const outputTotalPerPerson = getTotalPerPerson(+bill, +numberOfPeople);
-    const calculatedTip = getCalculatedTip(
+    const tipAmount = getTipAmount(
       getTotalPerPerson(+bill, +numberOfPeople),
       +customTip || +regularTip
     );
@@ -35,7 +35,7 @@ const Output = (props: OutputProps) => {
       return;
     }
 
-    return calculatedTip.toFixed(2);
+    return tipAmount.toFixed(2);
   };
 
   return (

@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 
 export const isEmpty = (str: string | number): boolean => {
-  return str === "" ? true : false;
+  return str === "";
 };
 
 export const getTotalPerPerson = (bill: number, numPeople: number): number => {
@@ -10,7 +10,7 @@ export const getTotalPerPerson = (bill: number, numPeople: number): number => {
     : 0;
 };
 
-export const getCalculatedTip = (
+export const getTipAmount = (
   totalPerPerson: number,
   tip: number
 ): number => {
