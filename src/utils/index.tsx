@@ -10,14 +10,11 @@ export const getTotalPerPerson = (bill: number, numPeople: number): number => {
     : 0
 }
 
-export const getTipAmount = (
-  totalPerPerson: number,
-  tip: number
-): number => {
+export const getTipAmount = (totalPerPerson: number, tip: number): number => {
   return (totalPerPerson / 100) * tip
 }
 
-type NumOfPeople = number;
+type NumOfPeople = number
 export const usePrevious = (value: NumOfPeople): NumOfPeople | undefined => {
   const ref = useRef<NumOfPeople>()
   useEffect(() => {

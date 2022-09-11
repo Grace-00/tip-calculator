@@ -7,7 +7,7 @@ import RegularTipSelector from "./components/RegularTipSelector/RegularTipSelect
 
 type typeEvent =
   | React.ChangeEvent<HTMLInputElement>
-  | React.MouseEvent<HTMLButtonElement>;
+  | React.MouseEvent<HTMLButtonElement>
 
 const EntryPoint = () => {
   const [bill, setBill] = useState("")

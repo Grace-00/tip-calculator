@@ -3,7 +3,7 @@ import "./Input.css"
 import React, { FC, useState } from "react"
 import Label, { LabelText } from "../Label/Label"
 
-type Currency = string | number;
+type Currency = string | number
 
 interface InputProps {
   id: string
@@ -39,7 +39,7 @@ const Input: FC<InputProps> = ({
 
   return (
     <div className={isValue0 ? "input number-people alert" : `${className}`}>
-      { /* eslint-disable @typescript-eslint/no-non-null-assertion */ }
+      {/* eslint-disable @typescript-eslint/no-non-null-assertion */}
       <Label label={label!} />
       {isValue0 && <span className="span-alert">Can't be zero</span>}
       <input
