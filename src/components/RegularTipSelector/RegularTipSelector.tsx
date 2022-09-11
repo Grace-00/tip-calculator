@@ -2,13 +2,13 @@ import React from "react"
 import "./RegularTipSelector.css"
 
 interface TipSelectorProps {
-  id: string
+  id?: string
   tipBtns: number[]
   handleValueUpdate: (e: React.MouseEvent<HTMLButtonElement>) => void
 }
 
 const TipSelector = (props: TipSelectorProps) => {
-  const { id, tipBtns, handleValueUpdate } = props
+  const { tipBtns, handleValueUpdate } = props
 
   return (
     <>
@@ -17,7 +17,7 @@ const TipSelector = (props: TipSelectorProps) => {
           <button
             className="tip-selector-btn"
             onClick={handleValueUpdate}
-            key={id}
+            key={tipBtn}
           >{`${tipBtn + "%"}`}</button>
         )
       })}
