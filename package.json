@@ -10,7 +10,7 @@
     "start": "parcel",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint \"src/**/*.{ts,tsx}\" --quiet",
-    "format": "prettier --write \"src/**/*.{ts,tsx}\""
+    "format": "prettier --write --no-semi \"src/**/*.{ts,tsx}\""
   },
   "keywords": [],
   "author": "",
