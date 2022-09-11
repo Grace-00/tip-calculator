@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 export enum LabelText {
   Regular = "Regular",
@@ -9,11 +9,11 @@ export enum LabelText {
 }
 
 interface LabelProps {
-  readonly label: LabelText;
+  readonly label: LabelText
 }
 
 const Label = (props: LabelProps) => {
-  return <label className="tip-selector-label">{props.label}</label>;
-};
+  return <label className="tip-selector-label">{props.label}</label>
+}
 
-export default Label;
+export default Label

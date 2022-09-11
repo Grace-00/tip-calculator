@@ -1,19 +1,19 @@
-import "./TipSelector.css";
+import "./TipSelector.css"
 
-import React from "react";
+import React from "react"
 export interface tipBtn {
-  regularTip: number;
-  type: string;
+  regularTip: number
+  type: string
 }
 
 interface TipSelectorProps {
-  id: string;
-  tipBtn: tipBtn;
-  handleValueUpdate: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  id: string
+  tipBtn: tipBtn
+  handleValueUpdate: (e: React.MouseEvent<HTMLButtonElement>) => void
 }
 
 const TipSelector = (props: TipSelectorProps) => {
-  const { id, tipBtn, handleValueUpdate } = props;
+  const { id, tipBtn, handleValueUpdate } = props
 
   return (
     <>
@@ -23,7 +23,7 @@ const TipSelector = (props: TipSelectorProps) => {
         id={id}
       >{`${tipBtn.regularTip + "%"}`}</button>
     </>
-  );
-};
+  )
+}
 
-export default TipSelector;
+export default TipSelector

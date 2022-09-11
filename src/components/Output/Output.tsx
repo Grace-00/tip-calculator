@@ -1,42 +1,42 @@
-import "./Output.css";
+import "./Output.css"
 
-import React from "react";
+import React from "react"
 import {
   getTipAmount,
   getTotalPerPerson,
   isEmpty,
   usePrevious,
-} from "../../utils";
+} from "../../utils"
 
 interface OutputProps {
-  bill: string;
-  numberOfPeople: string;
-  customTip: number | string;
-  regularTip: number | string;
-  reset?: () => void;
+  bill: string
+  numberOfPeople: string
+  customTip: number | string
+  regularTip: number | string
+  reset?: () => void
 }
 
 const Output = (props: OutputProps) => {
-  const { bill, numberOfPeople, customTip, regularTip, reset } = props;
+  const { bill, numberOfPeople, customTip, regularTip, reset } = props
 
   const getOutputTip = () => {
-    const outputTotalPerPerson = getTotalPerPerson(+bill, +numberOfPeople);
+    const outputTotalPerPerson = getTotalPerPerson(+bill, +numberOfPeople)
     const tipAmount = getTipAmount(
       getTotalPerPerson(+bill, +numberOfPeople),
       +customTip || +regularTip
-    );
-    const prevNumberOfPeople = usePrevious(+numberOfPeople);
+    )
+    const prevNumberOfPeople = usePrevious(+numberOfPeople)
 
     if (
       !outputTotalPerPerson ||
       !(+customTip || +regularTip) ||
       +numberOfPeople !== prevNumberOfPeople
     ) {
-      return;
+      return
     }
 
-    return tipAmount.toFixed(2);
-  };
+    return tipAmount.toFixed(2)
+  }
 
   return (
     <div className="output-wrapper">
@@ -66,7 +66,7 @@ const Output = (props: OutputProps) => {
         reset
       </button>
     </div>
-  );
-};
+  )
+}
 
-export default Output;
+export default Output

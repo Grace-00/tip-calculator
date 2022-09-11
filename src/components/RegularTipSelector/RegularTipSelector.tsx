@@ -1,14 +1,14 @@
-import React from "react";
-import "./RegularTipSelector.css";
+import React from "react"
+import "./RegularTipSelector.css"
 
 interface TipSelectorProps {
-  id: string;
-  tipBtns: number[];
-  handleValueUpdate: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  id: string
+  tipBtns: number[]
+  handleValueUpdate: (e: React.MouseEvent<HTMLButtonElement>) => void
 }
 
 const TipSelector = (props: TipSelectorProps) => {
-  const { id, tipBtns, handleValueUpdate } = props;
+  const { id, tipBtns, handleValueUpdate } = props
 
   return (
     <>
@@ -19,10 +19,10 @@ const TipSelector = (props: TipSelectorProps) => {
             onClick={handleValueUpdate}
             key={id}
           >{`${tipBtn + "%"}`}</button>
-        );
+        )
       })}
     </>
-  );
-};
+  )
+}
 
-export default TipSelector;
+export default TipSelector

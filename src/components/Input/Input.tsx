@@ -1,19 +1,19 @@
-import "./Input.css";
+import "./Input.css"
 
-import React, { FC, useState } from "react";
-import Label, { LabelText } from "../Label/Label";
+import React, { FC, useState } from "react"
+import Label, { LabelText } from "../Label/Label"
 
 type Currency = string | number;
 
 interface InputProps {
-  id: string;
-  type: string;
-  placeholder: string;
-  numPeople?: string;
-  value: Currency;
-  handleValueUpdate: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  className?: string;
-  label?: LabelText;
+  id: string
+  type: string
+  placeholder: string
+  numPeople?: string
+  value: Currency
+  handleValueUpdate: (e: React.ChangeEvent<HTMLInputElement>) => void
+  className?: string
+  label?: LabelText
 }
 
 const Input: FC<InputProps> = ({
@@ -25,20 +25,21 @@ const Input: FC<InputProps> = ({
   className,
   label,
 }) => {
-  const [onFocus, setOnFocus] = useState(false);
-  const [onBlur, setOnBlur] = useState(false);
+  const [onFocus, setOnFocus] = useState(false)
+  const [onBlur, setOnBlur] = useState(false)
 
   const handleOnFocus = () => {
-    setOnFocus(true);
-  };
+    setOnFocus(!onFocus)
+  }
   const handleOnBlur = () => {
-    setOnBlur(true);
-  };
+    setOnBlur(!onBlur)
+  }
   const isValue0 =
-    className === "input number-people" && onFocus && value === "0";
+    className === "input number-people" && onFocus && value === "0"
 
   return (
     <div className={isValue0 ? "input number-people alert" : `${className}`}>
+      { /* eslint-disable @typescript-eslint/no-non-null-assertion */ }
       <Label label={label!} />
       {isValue0 && <span className="span-alert">Can't be zero</span>}
       <input
@@ -52,7 +53,7 @@ const Input: FC<InputProps> = ({
         onBlur={handleOnBlur}
       />
     </div>
-  );
-};
+  )
+}
 
-export default Input;
+export default Input

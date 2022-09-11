@@ -1,43 +1,43 @@
-import React, { useState } from "react";
-import Header from "./components/Header/Header";
-import Input from "./components/Input/Input";
-import Label, { LabelText } from "./components/Label/Label";
-import Output from "./components/Output/Output";
-import RegularTipSelector from "./components/RegularTipSelector/RegularTipSelector";
+import React, { useState } from "react"
+import Header from "./components/Header/Header"
+import Input from "./components/Input/Input"
+import Label, { LabelText } from "./components/Label/Label"
+import Output from "./components/Output/Output"
+import RegularTipSelector from "./components/RegularTipSelector/RegularTipSelector"
 
 type typeEvent =
   | React.ChangeEvent<HTMLInputElement>
   | React.MouseEvent<HTMLButtonElement>;
 
 const EntryPoint = () => {
-  const [bill, setBill] = useState("");
-  const [numberOfPeople, setNumberOfPeople] = useState("");
-  const [regularTip, setRegularTip] = useState("");
-  const [customTip, setCustomTip] = useState("");
+  const [bill, setBill] = useState("")
+  const [numberOfPeople, setNumberOfPeople] = useState("")
+  const [regularTip, setRegularTip] = useState("")
+  const [customTip, setCustomTip] = useState("")
 
   const onValueUpdate = (e: typeEvent) => {
-    const userInput = (e.currentTarget as HTMLInputElement).value;
-    const targetId = (e.currentTarget as Element).id;
-    const regularTip = e.currentTarget.innerText.slice(0, -1);
+    const userInput = (e.currentTarget as HTMLInputElement).value
+    const targetId = (e.currentTarget as Element).id
+    const regularTip = e.currentTarget.innerText.slice(0, -1)
 
     switch (targetId) {
       case LabelText.Bill:
-        return +userInput < 0 ? 0 : setBill(userInput);
+        return +userInput < 0 ? 0 : setBill(userInput)
       case LabelText.NumberOfPeople:
-        return +userInput < 0 ? 0 : setNumberOfPeople(userInput);
+        return +userInput < 0 ? 0 : setNumberOfPeople(userInput)
       case LabelText.Custom:
-        return setCustomTip(userInput);
+        return setCustomTip(userInput)
       case LabelText.Regular:
-        return setRegularTip(regularTip);
+        return setRegularTip(regularTip)
     }
-  };
+  }
 
   const reset = () => {
-    setBill("");
-    setNumberOfPeople("");
-    setCustomTip("");
-    setRegularTip("");
-  };
+    setBill("")
+    setNumberOfPeople("")
+    setCustomTip("")
+    setRegularTip("")
+  }
 
   return (
     <>
@@ -92,7 +92,7 @@ const EntryPoint = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default EntryPoint;
+export default EntryPoint

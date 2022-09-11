@@ -1,16 +1,31 @@
 {
     "extends": [
       "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
       "prettier"
     ],
     "plugins": [
-      "react"
+      "react",
+      "typescript"
     ],
     "rules": {
       "react/jsx-uses-vars": "error",
-      "react/jsx-uses-react": "error"
+      "react/jsx-uses-react": "error",
+      "semi": ["error", "never"],
+      "@typescript-eslint/member-delimiter-style": ["error", {
+        "multiline": {
+          "delimiter": "none",
+          "requireLast": true
+        },
+        "singleline": {
+          "delimiter": "semi",
+          "requireLast": false
+        },
+        "multilineDetection": "brackets"
+      }]
     },
     "parserOptions": {
+      "project": "tsconfig.json",
       "ecmaVersion": 2021,
       "sourceType": "module",
       "ecmaFeatures": {
