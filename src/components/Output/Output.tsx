@@ -26,16 +26,37 @@ const Output = (props: OutputProps) => {
       +customTip || +regularTip
     )
     const prevNumberOfPeople = usePrevious(+numberOfPeople)
+    const prevBill = usePrevious(+bill)
 
     if (
       !outputTotalPerPerson ||
       !(+customTip || +regularTip) ||
-      +numberOfPeople !== prevNumberOfPeople
+      +numberOfPeople !== prevNumberOfPeople ||
+      +bill !== prevBill
     ) {
       return
     }
 
     return tipAmount.toFixed(2)
+  }
+
+  const getOutputTotalPerPerson = () => {
+    const outputTotalPerPerson = getTotalPerPerson(+bill, +numberOfPeople)
+    const tipAmount = getTipAmount(
+      getTotalPerPerson(+bill, +numberOfPeople),
+      +customTip || +regularTip
+    )
+    const prevNumberOfPeople = usePrevious(+numberOfPeople)
+    const prevBill = usePrevious(+bill)
+    if (
+      !(+customTip || +regularTip) ||
+      +numberOfPeople !== prevNumberOfPeople ||
+      +bill !== prevBill
+    ) {
+      return outputTotalPerPerson
+    }
+
+    return (outputTotalPerPerson + tipAmount).toFixed(2)
   }
 
   return (
@@ -55,7 +76,7 @@ const Output = (props: OutputProps) => {
           <span>/ person</span>
         </div>
         <div className="output-value">
-          <p>${getTotalPerPerson(+bill, +numberOfPeople) || "00.00"}</p>
+          <p>${getOutputTotalPerPerson() || "00.00"}</p>
         </div>
       </div>
       <button
