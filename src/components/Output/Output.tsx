@@ -4,8 +4,7 @@ import React from "react"
 import {
   getTipAmount,
   getTotalPerPerson,
-  isEmpty,
-  usePrevious,
+  isEmpty
 } from "../../utils"
 
 interface OutputProps {
@@ -20,24 +19,11 @@ const Output = (props: OutputProps) => {
   const { bill, numberOfPeople, customTip, regularTip, reset } = props
 
   const getOutputTip = () => {
-    const outputTotalPerPerson = getTotalPerPerson(+bill, +numberOfPeople)
     const tipAmount = getTipAmount(
       getTotalPerPerson(+bill, +numberOfPeople),
       +customTip || +regularTip
     )
-    const prevNumberOfPeople = usePrevious(+numberOfPeople)
-    const prevBill = usePrevious(+bill)
-
-    if (
-      !outputTotalPerPerson ||
-      !(+customTip || +regularTip) ||
-      +numberOfPeople !== prevNumberOfPeople ||
-      +bill !== prevBill
-    ) {
-      return
-    }
-
-    return tipAmount.toFixed(2)
+    return tipAmount ? tipAmount.toFixed(2) : '00.00'
   }
 
   const getOutputTotalPerPerson = () => {
@@ -46,17 +32,7 @@ const Output = (props: OutputProps) => {
       getTotalPerPerson(+bill, +numberOfPeople),
       +customTip || +regularTip
     )
-    const prevNumberOfPeople = usePrevious(+numberOfPeople)
-    const prevBill = usePrevious(+bill)
-    if (
-      !(+customTip || +regularTip) ||
-      +numberOfPeople !== prevNumberOfPeople ||
-      +bill !== prevBill
-    ) {
-      return outputTotalPerPerson
-    }
-
-    return (outputTotalPerPerson + tipAmount).toFixed(2)
+    return (outputTotalPerPerson + tipAmount) ? (outputTotalPerPerson + tipAmount).toFixed(2) : '00.00'
   }
 
   return (
@@ -67,7 +43,7 @@ const Output = (props: OutputProps) => {
           <span>/ person</span>
         </div>
         <div className="output-value">
-          <p>${getOutputTip() || "00.00"}</p>
+          <p>${getOutputTip()}</p>
         </div>
       </div>
       <div className="output-total">
@@ -76,7 +52,7 @@ const Output = (props: OutputProps) => {
           <span>/ person</span>
         </div>
         <div className="output-value">
-          <p>${getOutputTotalPerPerson() || "00.00"}</p>
+          <p>${getOutputTotalPerPerson()}</p>
         </div>
       </div>
       <button
