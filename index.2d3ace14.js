@@ -27077,9 +27077,8 @@ var _label = require("./components/Label/Label");
 var _labelDefault = parcelHelpers.interopDefault(_label);
 var _output = require("./components/Output/Output");
 var _outputDefault = parcelHelpers.interopDefault(_output);
-var _tipSelector = require("./components/TipSelector/TipSelector");
-var _tipSelectorDefault = parcelHelpers.interopDefault(_tipSelector);
-var _tipBtns = require("./tipBtns");
+var _regularTipSelector = require("./components/RegularTipSelector/RegularTipSelector");
+var _regularTipSelectorDefault = parcelHelpers.interopDefault(_regularTipSelector);
 var _s = $RefreshSig$();
 const EntryPoint = ()=>{
     _s();
@@ -27112,7 +27111,7 @@ const EntryPoint = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "src/EntryPoint.tsx",
-                lineNumber: 45,
+                lineNumber: 44,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27133,7 +27132,7 @@ const EntryPoint = ()=>{
                                     className: "input bill"
                                 }, void 0, false, {
                                     fileName: "src/EntryPoint.tsx",
-                                    lineNumber: 49,
+                                    lineNumber: 48,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27143,23 +27142,27 @@ const EntryPoint = ()=>{
                                             label: (0, _label.LabelText).SelectTip
                                         }, void 0, false, {
                                             fileName: "src/EntryPoint.tsx",
-                                            lineNumber: 59,
+                                            lineNumber: 58,
                                             columnNumber: 15
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                             className: "tip-selector-wrapper",
                                             children: [
-                                                (0, _tipBtns.tipBtns).map((tipBtn)=>{
-                                                    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _tipSelectorDefault.default), {
-                                                        id: (0, _label.LabelText).Regular,
-                                                        tipBtn: tipBtn,
-                                                        handleValueUpdate: onValueUpdate
-                                                    }, tipBtn.regularTip, false, {
-                                                        fileName: "src/EntryPoint.tsx",
-                                                        lineNumber: 63,
-                                                        columnNumber: 21
-                                                    }, undefined);
-                                                }),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _regularTipSelectorDefault.default), {
+                                                    tipBtns: [
+                                                        5,
+                                                        10,
+                                                        15,
+                                                        25,
+                                                        50
+                                                    ],
+                                                    id: (0, _label.LabelText).Regular,
+                                                    handleValueUpdate: onValueUpdate
+                                                }, void 0, false, {
+                                                    fileName: "src/EntryPoint.tsx",
+                                                    lineNumber: 60,
+                                                    columnNumber: 17
+                                                }, undefined),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _inputDefault.default), {
                                                     type: "number",
                                                     placeholder: "Custom",
@@ -27169,19 +27172,19 @@ const EntryPoint = ()=>{
                                                     className: "input custom-bill"
                                                 }, void 0, false, {
                                                     fileName: "src/EntryPoint.tsx",
-                                                    lineNumber: 71,
+                                                    lineNumber: 65,
                                                     columnNumber: 17
                                                 }, undefined)
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/EntryPoint.tsx",
-                                            lineNumber: 60,
+                                            lineNumber: 59,
                                             columnNumber: 15
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/EntryPoint.tsx",
-                                    lineNumber: 58,
+                                    lineNumber: 57,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _inputDefault.default), {
@@ -27194,13 +27197,13 @@ const EntryPoint = ()=>{
                                     className: "input number-people"
                                 }, void 0, false, {
                                     fileName: "src/EntryPoint.tsx",
-                                    lineNumber: 81,
+                                    lineNumber: 75,
                                     columnNumber: 13
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/EntryPoint.tsx",
-                            lineNumber: 48,
+                            lineNumber: 47,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _outputDefault.default), {
@@ -27211,18 +27214,18 @@ const EntryPoint = ()=>{
                             reset: reset
                         }, void 0, false, {
                             fileName: "src/EntryPoint.tsx",
-                            lineNumber: 91,
+                            lineNumber: 85,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/EntryPoint.tsx",
-                    lineNumber: 47,
+                    lineNumber: 46,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/EntryPoint.tsx",
-                lineNumber: 46,
+                lineNumber: 45,
                 columnNumber: 7
             }, undefined)
         ]
@@ -27239,7 +27242,7 @@ $RefreshReg$(_c, "EntryPoint");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./components/Header/Header":"8cFjv","./components/Input/Input":"34rsO","./components/Label/Label":"br0MS","./components/Output/Output":"fnEjx","./components/TipSelector/TipSelector":"c87qA","./tipBtns":"bfc3H","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8cFjv":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./components/Header/Header":"8cFjv","./components/Input/Input":"34rsO","./components/Label/Label":"br0MS","./components/Output/Output":"fnEjx","./components/RegularTipSelector/RegularTipSelector":"grLqA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8cFjv":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$1fca = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27450,10 +27453,10 @@ const Input = ({ type , value , placeholder , id , handleValueUpdate , className
     const [onFocus, setOnFocus] = (0, _react.useState)(false);
     const [onBlur, setOnBlur] = (0, _react.useState)(false);
     const handleOnFocus = ()=>{
-        setOnFocus(true);
+        setOnFocus(!onFocus);
     };
     const handleOnBlur = ()=>{
-        setOnBlur(true);
+        setOnBlur(!onBlur);
     };
     const isValue0 = className === "input number-people" && onFocus && value === "0";
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27463,7 +27466,7 @@ const Input = ({ type , value , placeholder , id , handleValueUpdate , className
                 label: label
             }, void 0, false, {
                 fileName: "src/components/Input/Input.tsx",
-                lineNumber: 42,
+                lineNumber: 43,
                 columnNumber: 7
             }, undefined),
             isValue0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
@@ -27471,7 +27474,7 @@ const Input = ({ type , value , placeholder , id , handleValueUpdate , className
                 children: "Can't be zero"
             }, void 0, false, {
                 fileName: "src/components/Input/Input.tsx",
-                lineNumber: 43,
+                lineNumber: 44,
                 columnNumber: 20
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -27485,7 +27488,7 @@ const Input = ({ type , value , placeholder , id , handleValueUpdate , className
                 onBlur: handleOnBlur
             }, void 0, false, {
                 fileName: "src/components/Input/Input.tsx",
-                lineNumber: 44,
+                lineNumber: 45,
                 columnNumber: 7
             }, undefined)
         ]
@@ -27562,21 +27565,16 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _utils = require("../../utils");
 const Output = (props)=>{
-    var _s = $RefreshSig$();
     const { bill , numberOfPeople , customTip , regularTip , reset  } = props;
     const getOutputTip = ()=>{
-        _s();
-        const outputTotalPerPerson = (0, _utils.getTotalPerPerson)(+bill, +numberOfPeople);
-        const calculatedTip = (0, _utils.getCalculatedTip)((0, _utils.getTotalPerPerson)(+bill, +numberOfPeople), +customTip || +regularTip);
-        const prevNumberOfPeople = (0, _utils.usePrevious)(+numberOfPeople);
-        if (!outputTotalPerPerson || !(+customTip || +regularTip) || +numberOfPeople !== prevNumberOfPeople) return;
-        return calculatedTip.toFixed(2);
+        const tipAmount = (0, _utils.getTipAmount)((0, _utils.getTotalPerPerson)(+bill, +numberOfPeople), +customTip || +regularTip);
+        return tipAmount ? tipAmount.toFixed(2) : "00.00";
     };
-    _s(getOutputTip, "eOb75qpewQ/O9jegV779UYhAQbg=", false, function() {
-        return [
-            (0, _utils.usePrevious)
-        ];
-    });
+    const getOutputTotalPerPerson = ()=>{
+        const outputTotalPerPerson = (0, _utils.getTotalPerPerson)(+bill, +numberOfPeople);
+        const tipAmount = (0, _utils.getTipAmount)((0, _utils.getTotalPerPerson)(+bill, +numberOfPeople), +customTip || +regularTip);
+        return outputTotalPerPerson + tipAmount ? (outputTotalPerPerson + tipAmount).toFixed(2) : "00.00";
+    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "output-wrapper",
         children: [
@@ -27590,20 +27588,20 @@ const Output = (props)=>{
                                 children: "Tip Amount"
                             }, void 0, false, {
                                 fileName: "src/components/Output/Output.tsx",
-                                lineNumber: 45,
+                                lineNumber: 42,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                 children: "/ person"
                             }, void 0, false, {
                                 fileName: "src/components/Output/Output.tsx",
-                                lineNumber: 46,
+                                lineNumber: 43,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Output/Output.tsx",
-                        lineNumber: 44,
+                        lineNumber: 41,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27611,22 +27609,22 @@ const Output = (props)=>{
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                             children: [
                                 "$",
-                                getOutputTip() || "00.00"
+                                getOutputTip()
                             ]
                         }, void 0, true, {
                             fileName: "src/components/Output/Output.tsx",
-                            lineNumber: 49,
+                            lineNumber: 46,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/Output/Output.tsx",
-                        lineNumber: 48,
+                        lineNumber: 45,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Output/Output.tsx",
-                lineNumber: 43,
+                lineNumber: 40,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27639,20 +27637,20 @@ const Output = (props)=>{
                                 children: "Total"
                             }, void 0, false, {
                                 fileName: "src/components/Output/Output.tsx",
-                                lineNumber: 54,
+                                lineNumber: 51,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                 children: "/ person"
                             }, void 0, false, {
                                 fileName: "src/components/Output/Output.tsx",
-                                lineNumber: 55,
+                                lineNumber: 52,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Output/Output.tsx",
-                        lineNumber: 53,
+                        lineNumber: 50,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27660,22 +27658,22 @@ const Output = (props)=>{
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                             children: [
                                 "$",
-                                (0, _utils.getTotalPerPerson)(+bill, +numberOfPeople) || "00.00"
+                                getOutputTotalPerPerson()
                             ]
                         }, void 0, true, {
                             fileName: "src/components/Output/Output.tsx",
-                            lineNumber: 58,
+                            lineNumber: 55,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/Output/Output.tsx",
-                        lineNumber: 57,
+                        lineNumber: 54,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Output/Output.tsx",
-                lineNumber: 52,
+                lineNumber: 49,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27685,13 +27683,13 @@ const Output = (props)=>{
                 children: "reset"
             }, void 0, false, {
                 fileName: "src/components/Output/Output.tsx",
-                lineNumber: 61,
+                lineNumber: 58,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Output/Output.tsx",
-        lineNumber: 42,
+        lineNumber: 39,
         columnNumber: 5
     }, undefined);
 };
@@ -27706,72 +27704,49 @@ $RefreshReg$(_c, "Output");
   window.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"iTorj","./Output.css":"jxtmQ","react":"21dqq","../../utils":"bxedF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jxtmQ":[function() {},{}],"bxedF":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$0804 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$0804.prelude(module);
-
-try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "isEmpty", ()=>isEmpty);
 parcelHelpers.export(exports, "getTotalPerPerson", ()=>getTotalPerPerson);
-parcelHelpers.export(exports, "getCalculatedTip", ()=>getCalculatedTip);
-parcelHelpers.export(exports, "usePrevious", ()=>usePrevious);
-var _react = require("react");
-var _s = $RefreshSig$();
+parcelHelpers.export(exports, "getTipAmount", ()=>getTipAmount);
 const isEmpty = (str)=>{
-    return str === "" ? true : false;
+    return str === "";
 };
 const getTotalPerPerson = (bill, numPeople)=>{
     return numPeople > 0 && Number.isInteger(numPeople) ? +(bill / numPeople).toFixed(2) : 0;
 };
-const getCalculatedTip = (totalPerPerson, tip)=>{
+const getTipAmount = (totalPerPerson, tip)=>{
     return totalPerPerson / 100 * tip;
 };
-const usePrevious = (value)=>{
-    _s();
-    const ref = (0, _react.useRef)();
-    (0, _react.useEffect)(()=>{
-        ref.current = value; //assign the value of ref to the argument
-    }, [
-        value
-    ]); //this code will run when the value of 'value' changes
-    return ref.current; //in the end, return the current ref value.
-};
-_s(usePrevious, "8uVE59eA/r6b92xF80p7sH8rXLk=");
 
-  $parcel$ReactRefreshHelpers$0804.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"c87qA":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$aa37 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"grLqA":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0781 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$aa37.prelude(module);
+$parcel$ReactRefreshHelpers$0781.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _tipSelectorCss = require("./TipSelector.css");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _regularTipSelectorCss = require("./RegularTipSelector.css");
 const TipSelector = (props)=>{
-    const { id , tipBtn , handleValueUpdate  } = props;
+    const { id , tipBtns , handleValueUpdate  } = props;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-            className: "tip-selector-btn",
-            onClick: handleValueUpdate,
-            id: id,
-            children: `${tipBtn.regularTip + "%"}`
-        }, void 0, false, {
-            fileName: "src/components/TipSelector/TipSelector.tsx",
-            lineNumber: 20,
-            columnNumber: 7
-        }, undefined)
+        children: tipBtns.map((tipBtn)=>{
+            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                className: "tip-selector-btn",
+                onClick: handleValueUpdate,
+                id: id,
+                children: `${tipBtn + "%"}`
+            }, tipBtn, false, {
+                fileName: "src/components/RegularTipSelector/RegularTipSelector.tsx",
+                lineNumber: 17,
+                columnNumber: 11
+            }, undefined);
+        })
     }, void 0, false);
 };
 _c = TipSelector;
@@ -27779,38 +27754,11 @@ exports.default = TipSelector;
 var _c;
 $RefreshReg$(_c, "TipSelector");
 
-  $parcel$ReactRefreshHelpers$aa37.postlude(module);
+  $parcel$ReactRefreshHelpers$0781.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./TipSelector.css":"9a5wk","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9a5wk":[function() {},{}],"bfc3H":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "tipBtns", ()=>tipBtns);
-const tipBtns = [
-    {
-        regularTip: 5,
-        type: "regular"
-    },
-    {
-        regularTip: 10,
-        type: "regular"
-    },
-    {
-        regularTip: 15,
-        type: "regular"
-    },
-    {
-        regularTip: 25,
-        type: "regular"
-    },
-    {
-        regularTip: 50,
-        type: "regular"
-    }, 
-];
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"irmnC":[function() {},{}]},["1xC6H","6FqiZ","4aBH6"], "4aBH6", "parcelRequire95a3")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./RegularTipSelector.css":"gZcDX","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gZcDX":[function() {},{}],"irmnC":[function() {},{}]},["1xC6H","6FqiZ","4aBH6"], "4aBH6", "parcelRequire95a3")
 
 //# sourceMappingURL=index.2d3ace14.js.map
